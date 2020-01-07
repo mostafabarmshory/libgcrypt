@@ -60,7 +60,11 @@ hash-common.c hash-common.h \
 dsa-common.c rsa-common.c \
 sha1.h
 
+#
+# 4- Add cipher source file
+#
 EXTRA_libcipher_la_SOURCES = \
+xor.c \
 arcfour.c arcfour-amd64.S \
 blowfish.c blowfish-amd64.S blowfish-arm.S \
 cast5.c cast5-amd64.S cast5-arm.S \

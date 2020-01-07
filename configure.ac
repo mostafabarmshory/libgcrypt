@@ -187,7 +187,7 @@ LIBGCRYPT_CONFIG_CFLAGS=""
 LIBGCRYPT_CONFIG_HOST="$host"
 
 # Definitions for symmetric ciphers.
-available_ciphers="arcfour blowfish cast5 des aes twofish serpent rfc2268 seed"
+available_ciphers="xor arcfour blowfish cast5 des aes twofish serpent rfc2268 seed"
 available_ciphers="$available_ciphers camellia idea salsa20 gost28147 chacha20"
 enabled_ciphers=""
 
@@ -2009,6 +2009,16 @@ fi
 
 # Define conditional sources and config.h symbols depending on the
 # selected ciphers, pubkey-ciphers, digests, kdfs, and random modules.
+
+#
+# 5- Adding configuration of build
+#
+#
+LIST_MEMBER(xor, $enabled_ciphers)
+if test "$found" = "1" ; then
+   GCRYPT_CIPHERS="$GCRYPT_CIPHERS xor.lo"
+   AC_DEFINE(USE_XOR, 1, [Defined if this module should be included])
+fi
 
 LIST_MEMBER(arcfour, $enabled_ciphers)
 if test "$found" = "1"; then

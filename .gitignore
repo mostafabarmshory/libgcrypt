@@ -105,3 +105,13 @@ tests/t-sexp
 tests/tsexp
 tests/version
 tests/*.exe
+
+# Remove build inter
+/VERSION
+/config.h.in~
+
+# Remove eclipse configuration
+/.autotools
+/.cproject
+/.project
+/.settings/

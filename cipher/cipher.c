@@ -87,6 +87,12 @@ static gcry_cipher_spec_t *cipher_list[] =
 #if USE_CHACHA20
      &_gcry_cipher_spec_chacha20,
 #endif
+	 /*
+	  * 2- Add cipher structure
+	  */
+#if USE_XOR
+     &_gcry_cipher_spec_xor,
+#endif
     NULL
   };
 

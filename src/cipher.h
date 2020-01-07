@@ -291,6 +291,14 @@ extern gcry_cipher_spec_t _gcry_cipher_spec_salsa20r12;
 extern gcry_cipher_spec_t _gcry_cipher_spec_gost28147;
 extern gcry_cipher_spec_t _gcry_cipher_spec_chacha20;
 
+/*
+ * 2- Add cipher structure
+ *
+ * This structure is added to be used in other part of
+ * the project.
+ */
+extern gcry_cipher_spec_t _gcry_cipher_spec_xor;
+
 /* Declarations for the digest specifications.  */
 extern gcry_md_spec_t _gcry_digest_spec_crc32;
 extern gcry_md_spec_t _gcry_digest_spec_crc32_rfc1510;

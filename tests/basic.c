@@ -6881,6 +6881,12 @@ static void
 check_ciphers (void)
 {
   static const int algos[] = {
+/*
+ * 6- Adding the cipher into the test
+ */
+#if USE_XOR
+    GCRY_CIPHER_XOR,
+#endif
 #if USE_BLOWFISH
     GCRY_CIPHER_BLOWFISH,
 #endif
